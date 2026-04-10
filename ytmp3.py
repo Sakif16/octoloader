@@ -4,10 +4,18 @@ import os
 #Dwonloaded files destination folder
 download_folder = os.path.join(os.path.expanduser("~"), "OneDrive", "Desktop", "downloaded mp3s")
 
+choice = input("Download Video [1] or Audio [2]?: ")
+
 url = input("Paste YouTube video link: ")
 
-#conversion
-ydl_opts = {
+if choice == '1':
+    ydl_opts ={
+        "format":"bestvideo+bestaudio/best",
+        "outtmpl": os.path.join(download_folder, '%(title)s.%(ext)s')
+    }
+
+elif choice == "2":
+    ydl_opts = {
     'format': 'bestaudio/best',
     'outtmpl': os.path.join(download_folder, '%(title)s.%(ext)s'),
     'postprocessors': [{
@@ -16,6 +24,9 @@ ydl_opts = {
         'preferredquality': '320',
     }],
 }
+else: print("Invalid choice")
+#conversion 
+
 
 with yt_dlp.YoutubeDL(ydl_opts) as ydl:
     ydl.download([url])
