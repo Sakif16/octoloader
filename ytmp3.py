@@ -1,5 +1,17 @@
 import yt_dlp
 import os
+from pyfiglet import Figlet
+from colorama import Fore, Style, init
+
+# Initialized colorama
+init()
+
+# ===== Banner =====
+f = Figlet(font='slant')
+print(Fore.CYAN + f.renderText('YTMP3') + Style.RESET_ALL)
+
+print(Fore.GREEN + "Welcome to Media Downloader" + Style.RESET_ALL)
+
 
 #Dwonloaded files destination folder
 download_folder = os.path.join(os.path.expanduser("~"), "OneDrive", "Desktop", "downloaded mp3s")
