@@ -1,0 +1,2 @@
+[console_scripts]
+octoload = octoload.main:main

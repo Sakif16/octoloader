@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: octoload
+Version: 1.0
+Requires-Dist: yt-dlp
+Requires-Dist: pyfiglet
+Requires-Dist: colorama
+Dynamic: requires-dist
