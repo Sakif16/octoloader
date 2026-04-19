@@ -10,13 +10,13 @@ def main():
 
     # ===== Banner =====
     f = Figlet(font='slant')
-    print(Fore.CYAN + f.renderText('YTMP3') + Style.RESET_ALL)
+    print(Fore.CYAN + f.renderText('OctoLoad') + Style.RESET_ALL)
 
-    print(Fore.GREEN + "Welcome to Media Downloader\n" + Style.RESET_ALL)
+    print(Fore.GREEN + "Welcome to Octoloader\n" + Style.RESET_ALL)
 
 
     #Dwonloaded files destination folder
-    download_folder = os.path.join(os.path.expanduser("~"), "OneDrive", "Desktop", "downloaded mp3s")
+    download_folder = os.path.join(os.path.expanduser("~"), "Downloads")
 
     #choice for audio or video
     print("Download-\n")
