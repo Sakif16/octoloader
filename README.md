@@ -31,23 +31,23 @@ OctoLoad is a lightweight Python-based CLI tool designed for quick and efficient
 ### 🔹 Step 1: Clone the repository
 ```bash
 git clone https://github.com/Sakif16/octoloader.git
-
+```
 ### 🔹 Step 2: Enter directory
 ```bash
 cd octoloader
-
+```
 ### 🔹 Step 3: Install the tool
 ```bash
 pip install .
-
+```
 ### 🔹 Step 4: Run the tool
 ```bash
 octoload 
-
+```
 ### 🔹 Step 5: If the above command does not work
 ```bash
 python -m octoload.main
-
+```
 ## 🤝 Contributions
 Contributions are welcome!
 
@@ -59,21 +59,24 @@ Contributions are welcome!
 - Enhancing documentation  
 
 ### How to contribute:
+### 1) Fork the repository
+### 2) Clone your fork
 ```bash
-# Fork the repository
-# Clone your fork
 git clone https://github.com/YOUR_USERNAME/octoloader.git
-
-# Create a new branch
+```
+### 3) Create a new branch
+```bash
 git checkout -b feature-name
-
-# Make your changes and commit
+```
+### 4) Make your changes and commit
+```bash
 git commit -m "Add: your feature description"
-
-# Push to your fork
+```
+### 5) Push to your fork
+```bash
 git push origin feature-name
-
-# Open a Pull Request on GitHub
+```
+### 6) Open a Pull Request on GitHub
 
 ## ⚠️ Known Issues
 - FFmpeg auto-download currently supports Windows only  
