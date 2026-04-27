@@ -1,47 +1,36 @@
-def ensure_ffmpeg():
-    import os
-    import shutil
-    import urllib.request
-    import zipfile
-   
+import urllib.request
+import os
 
-    # If already installed globally → use it
-    if shutil.which("ffmpeg"):
-        return None  # yt-dlp will use system ffmpeg
+def ensure_ffmpeg():
+    ffmpeg_path = os.path.join(os.getcwd(), "ffmpeg", "bin", "ffmpeg.exe")
+
+    if os.path.exists(ffmpeg_path):
+        return ffmpeg_path
 
     print("⚠️ FFmpeg not found. Downloading automatically...\n")
 
-    home = os.path.expanduser("~")
-    ffmpeg_dir = os.path.join(home, ".octoload", "ffmpeg")
-    os.makedirs(ffmpeg_dir, exist_ok=True)
-
-    zip_path = os.path.join(ffmpeg_dir, "ffmpeg.zip")
-
-    # Windows build (you can extend later)
     url = "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip"
+    zip_path = "ffmpeg.zip"
 
-    # Download
-    urllib.request.urlretrieve(url, zip_path)
+    # 🔥 Fix: remove broken partial file
+    if os.path.exists(zip_path):
+        os.remove(zip_path)
 
-    # Extract
+    try:
+        urllib.request.urlretrieve(url, zip_path)
+    except Exception as e:
+        print("❌ Download failed. Please check your internet and try again.")
+        raise e
+
+    print("✅ Download complete. Extracting...")
+
+    import zipfile
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-        zip_ref.extractall(ffmpeg_dir)
+        zip_ref.extractall("ffmpeg")
 
-    # Find ffmpeg.exe
-    ffmpeg_path = None
-    for root, dirs, files in os.walk(ffmpeg_dir):
-        if "ffmpeg.exe" in files:
-            ffmpeg_path = root
-            break
+    os.remove(zip_path)
 
-    if ffmpeg_path:
-        print("✅ FFmpeg ready!\n")
-        return ffmpeg_path
-    else:
-        print("❌ Failed to setup FFmpeg.")
-        return None
-
-
+    return ffmpeg_path
 
 
 def main():
