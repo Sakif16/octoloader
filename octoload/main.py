@@ -71,13 +71,13 @@ def main():
     print("[1] Video")
     print("[2] Audio\n")
 
-    choice = input("Choice: ")
+    choice = input("Choice: \n")
 
     if choice == "1":
         print("Video format-\n")
         print("[1]webm")
         print("[2]mp4\n")
-        video_format_choice = input("Choice: ")
+        video_format_choice = input("Choice: \n")
         
 
     url = input("Paste YouTube video link: ")
