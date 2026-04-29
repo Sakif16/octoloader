@@ -1,4 +1,4 @@
-# 🚀 OctoLoad
+#OctoLoad
 
 ## 🧩 Intro
 A simple command-line tool to download YouTube videos or convert them into high-quality MP3 files.
@@ -36,17 +36,18 @@ git clone https://github.com/Sakif16/octoloader.git
 ```bash
 cd octoloader
 ```
-### 🔹 Step 3: Install the tool
+### 🔹 Step 3: Install the dependencies
 ```bash
 pip install .
 ```
-### 🔹 Step 4: Run the tool
+### 🔹 Step 4: Install ffmpeg
+- For Windows, Download FFmpeg from: https://ffmpeg.org/download.html
+- Extract the file
+- add the bin folder to your system PATH
+
+### 🔹 Step 5: Run the tool
 ```bash
-octoload 
-```
-### 🔹 Step 5: If the above command does not work
-```bash
-python -m octoload.main
+python -m octoload.main 
 ```
 ## 🤝 Contributions
 Contributions are welcome!
