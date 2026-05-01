@@ -10,7 +10,7 @@ def main():
 
     # ===== Banner =====
     f = Figlet(font='slant')
-    print(Fore.CYAN + f.renderText('OctoLoad') + Style.RESET_ALL)
+    print(Fore.CYAN + f.renderText('OctoLoader') + Style.RESET_ALL)
     print(Fore.GREEN + "Welcome to OctoLoad\n" + Style.RESET_ALL)
 
     # Download folder (system Downloads)
