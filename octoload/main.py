@@ -9,9 +9,12 @@ def main():
     init()
 
     # ===== Banner =====
-    f = Figlet(font='slant')
-    print(Fore.CYAN + f.renderText('OctoLoader') + Style.RESET_ALL)
-    print(Fore.GREEN + "Welcome to OctoLoad\n" + Style.RESET_ALL)
+    f = Figlet(font='larry3d')  # changed font for better style
+    banner = f.renderText('OctoLoader')
+
+    print(Fore.MAGENTA + banner + Style.RESET_ALL)
+    print(Fore.GREEN + "Simple YouTube Video & MP3 Downloader\n")
+
 
     # Download folder (system Downloads)
     download_folder = os.path.join(os.path.expanduser("~"), "Downloads")
@@ -22,12 +25,14 @@ def main():
     print("[2] Audio\n")
 
     choice = input("Choice: ")
+    print("")
 
     if choice == "1":
         print("Video format-\n")
         print("[1] webm")
         print("[2] mp4\n")
         video_format_choice = input("Choice: ")
+        print("")
 
     url = input("Paste YouTube video link: ")
 
