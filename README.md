@@ -1,14 +1,14 @@
 # OctoLoad
 
-## 🧩 Intro
+## Intro
 A simple command-line tool to download YouTube videos or convert them into high-quality MP3 files.
 
 ---
 
-## 📖 Description
+## Description
 OctoLoad is a lightweight Python-based CLI tool designed for quick and efficient media downloading from YouTube. It provides an interactive terminal experience where users can choose between downloading videos or extracting audio.
 
-### 🔹 What you can do:
+### What you can do:
 - Download YouTube videos in high quality  
 - Convert videos into **320kbps MP3 audio**  
 - Choose between video formats (MP4 / WEBM)  
@@ -17,7 +17,7 @@ OctoLoad is a lightweight Python-based CLI tool designed for quick and efficient
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - Python  
 - yt-dlp  
 - FFmpeg  
@@ -26,7 +26,7 @@ OctoLoad is a lightweight Python-based CLI tool designed for quick and efficient
 
 ---
 
-## ⚙️ Installation & Usage
+## Installation & Usage
 
 ### 🔹 Step 1: Clone the repository
 ```bash
@@ -49,7 +49,7 @@ pip install .
 ```bash
 python -m octoload.main 
 ```
-## 🤝 Contributions
+## Contributions
 Contributions are welcome!
 
 ### You can contribute by:
@@ -88,7 +88,7 @@ git push origin feature-name
 - PATH-related issues may prevent the `octoload` command from running on some systems  
 - Limited testing on Linux and macOS environments  
 
-## 🚀 Future Development
+## Future Development
 - Cross-platform FFmpeg support (Linux & macOS)  
 - Add download progress bars (media + FFmpeg)  
 - Allow users to select video/audio quality  
